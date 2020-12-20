@@ -1,6 +1,6 @@
 {
   "name": "data-visualization",
-  "version": "1.22.1",
+  "version": "1.22.6",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",

@@ -4,8 +4,9 @@
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
-    "@fortawesome/react-fontawesome": "^0.1.13",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "bootstrap": "^4.5.3",
     "d3": "^6.3.1",
     "history": "^5.0.0",
@@ -44,7 +45,10 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
     "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "7.1.0",
+    "eslint-plugin-prettier": "3.3.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "2.2.1",
     "react-test-renderer": "^17.0.1",
     "sass": "^1.30.0"
   }

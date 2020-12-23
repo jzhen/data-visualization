@@ -22,6 +22,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+.eslintcache
+
 # compiled css from sass
 src/main.css
 src/main.css.map

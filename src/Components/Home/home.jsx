@@ -1,8 +1,34 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import plots from '../../lib/plotList';
 
 function Homepage() {
+  // render individual plot card
+  function renderCard(item) {
+    return (
+      <div className="col-md-4">
+        <div className="card mb-4 shadow-sm">
+          <div className="card-img-top px-4 py-5 bg-secondary text-center">
+            <div className="text-light my-5">Thumbnail</div>
+          </div>
+          <div className="card-body">
+            <p className="card-text">{item.description}</p>
+            <div className="d-flex justify-content-between align-items-center">
+              <Link type="button" className="btn btn-sm btn-outline-dark">
+                View
+              </Link>
+              <a href={item.library_url} className="link-dark">
+                {item.library_name}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <main role="main">
       <section className="jumbotron text-center">
@@ -33,194 +59,9 @@ function Homepage() {
           </p>
         </div>
       </section>
-
       <div className="album py-5 bg-light">
         <div className="container">
-
-          <div className="row">
-            <div className="col-md-4">
-              <div className="card mb-4 shadow-sm">
-                <div width="100%" height="225" background="#55595c" color="#eceeef" className="card-img-top">
-                  <span>Thumbnail</span>
-                </div>
-                <div className="card-body">
-                  <p className="card-text">
-                    This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.
-                  </p>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="card mb-4 shadow-sm">
-                <div width="100%" height="225" background="#55595c" color="#eceeef" className="card-img-top">
-                  <span>Thumbnail</span>
-                </div>
-                <div className="card-body">
-                  <p className="card-text">
-                    This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.
-                  </p>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="card mb-4 shadow-sm">
-                <div width="100%" height="225" background="#55595c" color="#eceeef" className="card-img-top">
-                  <span>Thumbnail</span>
-                </div>
-                <div className="card-body">
-                  <p className="card-text">
-                    This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.
-                  </p>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-4">
-              <div className="card mb-4 shadow-sm">
-                <div width="100%" height="225" background="#55595c" color="#eceeef" className="card-img-top">
-                  <span>Thumbnail</span>
-                </div>
-                <div className="card-body">
-                  <p className="card-text">
-                    This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.
-                  </p>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="card mb-4 shadow-sm">
-                <div width="100%" height="225" background="#55595c" color="#eceeef" className="card-img-top">
-                  <span>Thumbnail</span>
-                </div>
-                <div className="card-body">
-                  <p className="card-text">
-                    This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.
-                  </p>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="card mb-4 shadow-sm">
-                <div width="100%" height="225" background="#55595c" color="#eceeef" className="card-img-top">
-                  <span>Thumbnail</span>
-                </div>
-                <div className="card-body">
-                  <p className="card-text">
-                    This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.
-                  </p>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-4">
-              <div className="card mb-4 shadow-sm">
-                <div width="100%" height="225" background="#55595c" color="#eceeef" className="card-img-top">
-                  <span>Thumbnail</span>
-                </div>
-                <div className="card-body">
-                  <p className="card-text">
-                    This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.
-                  </p>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="card mb-4 shadow-sm">
-                <div width="100%" height="225" background="#55595c" color="#eceeef" className="card-img-top">
-                  <span>Thumbnail</span>
-                </div>
-                <div className="card-body">
-                  <p className="card-text">
-                    This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.
-                  </p>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="card mb-4 shadow-sm">
-                <div width="100%" height="225" background="#55595c" color="#eceeef" className="card-img-top">
-                  <span>Thumbnail</span>
-                </div>
-                <div className="card-body">
-                  <p className="card-text">
-                    This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.
-                  </p>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div className="row">{plots.map((item) => renderCard(item))}</div>
         </div>
       </div>
     </main>

@@ -5,7 +5,6 @@ import 'bootstrap';
 import Header from './Components/Header/header';
 import Homepage from './Components/Home/home';
 import Footer from './Components/Footer/footer';
-import fontawesomeIconSet from './lib/fontawesome';
 
 function App() {
   return (
